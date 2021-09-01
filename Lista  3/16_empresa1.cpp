@@ -88,4 +88,5 @@ int main(void)
         Calculo = toupper(Calculo);
 
     } while (Calculo != 'N');
+    system("cls");
 }
