@@ -43,7 +43,7 @@ int main(void)
         printf("\n---------------------------------------------\n");
 
         printf("---------------------------------------------");
-        printf("\nDeseja fazer novamente?<S> ou <N>\n");
+        printf("\nDeseja fazer novamente? <S> ou <N>\n");
         printf("---------------------------------------------\n");
         pimba = getche();
         pimba = toupper(pimba);
