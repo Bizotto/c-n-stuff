@@ -243,12 +243,31 @@ Menu:
         for (int i = 0; i < 13; i++)
         {
             VetorChar[i] = rand () %100;
-            printf("\n%i", VetorChar);
+            printf("\n%i", VetorChar[i]);
         }
-        printf("Digite um caracter qualquer: \n");
+        printf("\nDigite um caracter qualquer: \n");
         scanf("%s", &caracter);
-        
 
+        Qtasvezes = 0;
+        for (int i = 0; i < 13; i++)
+        {
+            if (caracter == VetorChar[i])
+            {
+                Qtasvezes = Qtasvezes+1;
+                printf("%s", VetorChar);
+            }
+        
+        }
+        printf("\nTotal de vezes = %s", Qtasvezes);
+        printf("\nTecle para ir ao Menu");
+        getche(); goto Menu;
+    
+    }
+    if (op == '4')
+    {
+        printf("\nSaindo do sistema.............");
+        printf("\nTecle Enter\n");
+        getche();
     }
     
 }
