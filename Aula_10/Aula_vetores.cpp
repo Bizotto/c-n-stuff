@@ -145,7 +145,9 @@ int VetorA[10], ind1, ind2, ind3, MultpValores;
 int vetor1[5], vetor2[5], vetor3soma[5];
 
 // 3
-char VetorChar[13], caracter, IndAparece, Qtasvezes;
+char VetorChar[13], caracter;
+int IndAparece;
+int Qtasvezes;
 
 char op;
 
@@ -242,11 +244,12 @@ Menu:
         printf("\nPrenechendo aleatoriamente 13 caracteres");
         for (int i = 0; i < 13; i++)
         {
-            VetorChar[i] = rand () %100;
-            printf("\n%i", VetorChar[i]);
+            VetorChar[i] = rand () %255;
+            printf("\n%c", VetorChar[i]);
         }
         printf("\nDigite um caracter qualquer: \n");
-        scanf("%s", &caracter);
+        fflush(stdin);
+        scanf("%c", &caracter);
 
         Qtasvezes = 0;
         for (int i = 0; i < 13; i++)
@@ -254,11 +257,11 @@ Menu:
             if (caracter == VetorChar[i])
             {
                 Qtasvezes = Qtasvezes+1;
-                printf("%s", VetorChar);
+                printf("%c", VetorChar[i]);
             }
         
         }
-        printf("\nTotal de vezes = %s", Qtasvezes);
+        printf("\nTotal de vezes = %i", Qtasvezes);
         printf("\nTecle para ir ao Menu");
         getche(); goto Menu;
     
