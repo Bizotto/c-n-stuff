@@ -238,7 +238,16 @@ Menu:
 
     if (op == '3')
     {
-    printf("funcionou ?");
+        system("cls");
+        printf("\nPrenechendo aleatoriamente 13 caracteres");
+        for (int i = 0; i < 13; i++)
+        {
+            VetorChar[i] = rand () %100;
+            printf("\n%i", VetorChar);
+        }
+        printf("Digite um caracter qualquer: \n");
+        scanf("%s", &caracter);
+        
 
     }
     
