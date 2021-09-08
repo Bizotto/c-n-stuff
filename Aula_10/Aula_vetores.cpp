@@ -184,7 +184,7 @@ Menu:
         printf("\nVetorA[%i]=%i", ind3, VetorA[ind3]);
         printf("\n==================================================\n");
 
-        printf("\nO valor da multiplicacao dos 3: %i", MultpValores);
+        printf("\nO valor da multiplicacao dos 3: %i\n", MultpValores);
         printf("\nTecle qualquer coisa para ir ao menu");
         getche();
         goto Menu;
@@ -196,32 +196,32 @@ Menu:
         printf("\nValores do Vetor");
         for (int i = 0; i < 5; i++)
         {
-            printf("\nDigite o valor do vetor1:");
+            printf("\nDigite o valor do vetor1: ");
             scanf("%i", &vetor1[i]);
         }
 
         printf("\nValores do Vetor");
         for (int i = 0; i < 5; i++)
         {
-            printf("\nDigite o valor do vetor2:");
+            printf("\nDigite o valor do vetor2: ");
             scanf("%i", &vetor2[i]);
         }
 
         for (int i = 0; i < 5; i++)
         {
-            vetor3soma[i] = vetor1[i] + vetor2[5-i];
+            vetor3soma[i] = vetor1[i] + vetor2[i];
         }
 
         printf("\nVetor 1\n");
         for (int i = 0; i < 5; i++)
         {
-            printf("\nVetor 1: %i", vetor2[i]);
+            printf("\nVetor 1: %i", vetor1[i]);
         }
 
         printf("\nVetor 2\n");
         for (int i = 0; i < 5; i++)
         {
-            printf("\nVetor 2\n: %i", vetor2[i]);
+            printf("\nVetor 2: %i", vetor2[i]);
         }
 
         printf("\nVetor da soma dos dois:\n");
