@@ -238,8 +238,8 @@ Menu:
 
     if (op == '3')
     {
-    printf("funcionou?");
-    
+    printf("funcionou ?");
+
     }
     
 }
