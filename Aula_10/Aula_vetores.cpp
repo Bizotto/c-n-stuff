@@ -235,4 +235,11 @@ Menu:
         goto Menu;
         system("cls");
     }
+
+    if (op == '3')
+    {
+    printf("funcionou?");
+    
+    }
+    
 }
