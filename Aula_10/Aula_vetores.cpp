@@ -163,29 +163,76 @@ Menu:
 
     if (op == '1')
     {
-        printf("\ngere aleatoriamente 10 valores inteiros aleatorios");
+        printf("\nGere aleatoriamente 10 valores inteiros aleatorios.");
         for (int i = 0; i < 10; i++)
         {
             VetorA[i] = rand() % 100;
-            printf( "\n%i",VetorA[i]);
+            printf("\n%i", VetorA[i]);
         }
-        printf("\ndigite o primeiro indice a buscar conteudo");
+        printf("\ndigite o primeiro indice a buscar conteudo: ");
         scanf("%i", &ind1);
-        printf("\ndigite o segundo indice a buscar conteudo");
+        printf("\ndigite o segundo indice a buscar conteudo: ");
         scanf("%i", &ind2);
-        printf("\ndigite o terceiro indice a buscar conteudo");
+        printf("\ndigite o terceiro indice a buscar conteudo: ");
         scanf("%i", &ind3);
 
         MultpValores = VetorA[ind1] * VetorA[ind2] * VetorA[ind3];
 
-        printf("VetorA[%i]=%i",ind1,VetorA[ind1]);
-        printf("VetorA[%i]=%i",ind2, VetorA[ind2]);
-        printf("VetorA[%i]=%i",ind3,VetorA[ind3]);
-        
-        printf("O valor da multiplicacao dos 3:%i", MultpValores);
-        printf("Tecle qualquer coisa para ir ao menu");
-        getche(); 
-        goto Menu; 
+        printf("==================================================");
+        printf("\nVetorA[%i]=%i", ind1, VetorA[ind1]);
+        printf("\nVetorA[%i]=%i", ind2, VetorA[ind2]);
+        printf("\nVetorA[%i]=%i", ind3, VetorA[ind3]);
+        printf("\n==================================================\n");
 
+        printf("\nO valor da multiplicacao dos 3: %i", MultpValores);
+        printf("\nTecle qualquer coisa para ir ao menu");
+        getche();
+        goto Menu;
+    }
+
+    if (op == '2')
+    {
+        system("cls");
+        printf("\nValores do Vetor");
+        for (int i = 0; i < 5; i++)
+        {
+            printf("\nDigite o valor do vetor1:");
+            scanf("%i", &vetor1[i]);
+        }
+
+        printf("\nValores do Vetor");
+        for (int i = 0; i < 5; i++)
+        {
+            printf("\nDigite o valor do vetor2:");
+            scanf("%i", &vetor2[i]);
+        }
+
+        for (int i = 0; i < 5; i++)
+        {
+            vetor3soma[i] = vetor1[i] + vetor2[5-i];
+        }
+
+        printf("\nVetor 1\n");
+        for (int i = 0; i < 5; i++)
+        {
+            printf("\nVetor 1: %i", vetor2[i]);
+        }
+
+        printf("\nVetor 2\n");
+        for (int i = 0; i < 5; i++)
+        {
+            printf("\nVetor 2\n: %i", vetor2[i]);
+        }
+
+        printf("\nVetor da soma dos dois:\n");
+        for (int i = 0; i < 5; i++)
+        {
+            printf("\nVetor da soma dos dois: %i", vetor3soma[i]);
+        }
+        
+        printf("\nTecle para voltar ao Menu!!");
+        getche();
+        goto Menu;
+        system("cls");
     }
 }
