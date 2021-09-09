@@ -6,34 +6,34 @@
 #include <conio.h>
 #include <stdio.h>
 #include <iostream>
-#include <time.h>
 
 // Variaveis
-int Vetor[20];
+int Vetor[20] /*= {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}*/;
 int ValorX;
-int QtasVezes;
+int Posicao;
 
 // incio
 int main(void)
 {
-    srand(time(0));
     system("cls");
+   
+
+   
     for (int i = 0; i < 20; i++)
     {
-        Vetor[i] = rand() % 20;
         printf("%i\n", Vetor[i]);
     }
-    printf("\nDigite um numero qualquer entre 1 e 20\n");
-    scanf("%i", &ValorX);
-
-    QtasVezes = 0;
+    printf("\nDigite um numero: ");
+    scanf("\n%i", &ValorX);
+    
     for (int i = 0; i < 20; i++)
     {
         if (ValorX == Vetor[i])
         {
-            QtasVezes = QtasVezes + 1;
-            printf("%i", Vetor[i]);
+            printf("O Numero %i esta na posicao [%i]",ValorX, i);
+            return(0);
         }
+        
     }
-    printf("\nTotal de vezes em que o Numero aparece = %i", QtasVezes);
+    
 }

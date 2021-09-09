@@ -6,10 +6,9 @@
 #include <conio.h>
 #include <stdio.h>
 #include <iostream>
-#include <time.h>
 
 // Variaveis
-int Vetor[20] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+int Vetor[20] /*= {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}*/;
 int ValorX;
 int Posicao;
 
@@ -19,18 +18,20 @@ int main(void)
     system("cls");
    
 
-    for (int i = 0; i < 20; i = i + 1)
+   
+    for (int i = 0; i < 20; i++)
     {
-        printf("%i\n", Vetor[i]);
+        printf("Digite um numero: \n");
+        scanf("%i", &Vetor[i]);
     }
-    printf("\nDigite um numero: ");
+    printf("\nDigite um numero para saber sua posicao: ");
     scanf("\n%i", &ValorX);
     
     for (int i = 0; i < 20; i++)
     {
         if (ValorX == Vetor[i])
         {
-            printf("%i", i);
+            printf("O Numero %i esta na posicao [%i]",ValorX, i);
             return(0);
         }
         
