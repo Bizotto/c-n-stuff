@@ -15,6 +15,7 @@ int main(void)
 {
   do
   {
+    system("cls");
     for (int i = 0; i < 12; i++)
     {
       printf("Digite um numero para o Vetor[%i]:\n", i);
@@ -32,7 +33,7 @@ int main(void)
     printf("O resultado do calculo: Vetor[%i] + Vetor[%i] foi: %i\n", NumeroX, NumeroY, Soma);
 
     printf("Deseja novos valores para o vetor? Digite <S> ou <N>.\n");
-    op=getche();
+    op = getche();
     op = toupper(op);
   } while (op != 'N');
 }
