@@ -5,25 +5,34 @@ Y. */
 
 int Vetor[12];
 int NumeroX, NumeroY, Soma;
+char op;
 
 #include <conio.h>
 #include <stdio.h>
 #include <iostream>
 
-int main(void){
-   for (int i = 0; i < 12; i++)
-   {
-     printf("Digite um numero para o Vetor[%i]:\n", i);
-     scanf("%i", &Vetor[i]);
-   }
-   
-   printf("Escolha um VetorX de 0 a 11.\n");
-   scanf("%i", &NumeroX);
-   
-   printf("Escolha um VetorY de 0 a 11.\n");
-   scanf("%i", &NumeroY);
+int main(void)
+{
+  do
+  {
+    for (int i = 0; i < 12; i++)
+    {
+      printf("Digite um numero para o Vetor[%i]:\n", i);
+      scanf("%i", &Vetor[i]);
+    }
 
-   Soma = Vetor[NumeroX] + Vetor[NumeroY];
+    printf("Escolha um VetorX de 0 a 11.\n");
+    scanf("%i", &NumeroX);
 
-   printf("O resultado do calculo: Vetor[%i] + Vetor[%i] foi: %i", NumeroX, NumeroY, Soma);
+    printf("Escolha um VetorY de 0 a 11.\n");
+    scanf("%i", &NumeroY);
+
+    Soma = Vetor[NumeroX] + Vetor[NumeroY];
+
+    printf("O resultado do calculo: Vetor[%i] + Vetor[%i] foi: %i\n", NumeroX, NumeroY, Soma);
+
+    printf("Deseja novos valores para o vetor? Digite <S> ou <N>.\n");
+    op=getche();
+    op = toupper(op);
+  } while (op != 'N');
 }
