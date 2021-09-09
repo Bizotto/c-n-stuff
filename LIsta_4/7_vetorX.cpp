@@ -35,5 +35,5 @@ int main(void)
             printf("%i", Vetor[i]);
         }
     }
-    printf("\nTotal de vezes en que o Numero aparece = %i", QtasVezes);
+    printf("\nTotal de vezes em que o Numero aparece = %i", QtasVezes);
 }
