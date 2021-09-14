@@ -20,9 +20,10 @@ int main(void)
         vetor[i] = rand() % 100;
         printf("\n Valor %i Na posicao[%i]", vetor[i], i);
     }
-    for (int i = 0; i < 40; i = i + 1)
+    somavetor[0] = vetor[0];
+    for (int i = 1; i < 40; i = i + 1)
     {
-        somavetor[i] = vetor[i] + vetor[i];
+        somavetor[i] = somavetor[i-1] + vetor[i];
 
         printf("\nO resultado da e  %i", somavetor[i]);
     }
