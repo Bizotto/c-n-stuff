@@ -23,8 +23,8 @@ int main(void)
     somavetor[0] = vetor[0];
     for (int i = 1; i < 40; i = i + 1)
     {
-        somavetor[i] = somavetor[i-1] + vetor[i];
+        somavetor[i] = somavetor[i - 1] + vetor[i];
 
-        printf("\nO resultado da e  %i", somavetor[i]);
+        printf("\nO resultado da e %i", somavetor[i]);
     }
 }
