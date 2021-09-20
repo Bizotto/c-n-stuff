@@ -37,11 +37,11 @@ int main(void)
 Menu:
     printf("\n==============================================");
     printf("\nMenu de opcoes:");
-    printf("\nOP 1 : 10 posi aleatoria.");
-    printf("\nOP 2 5 posi mult diferente.");
-    printf("\nOP 3 Vetor char. ");
-    printf("\nOP 4 Sair do sistema.");
-    printf("\n==============================================");
+    printf("\nOP 1= 10 posi aleatoria.");
+    printf("\nOP 2= 5 posi mult diferente.");
+    printf("\nOP 3= Vetor char. ");
+    printf("\nOP 4= Sair do sistema.");
+    printf("\n==============================================\n");
     scanf("%i", &op);
     if (op == 1)
     {
@@ -51,12 +51,12 @@ Menu:
             printf("\nVetor[%i] = %i", i, vetor[i]);
         }
 
-            printf("\nselecione o primeiro Indice: ");
-            scanf("%i", &vetor1);
-            printf("\nselecione o segundo Indice: ");
-            scanf("%i", &vetor2);
-            printf("\nselecione o terceiro Indice: ");
-            scanf("%i", &vetor3);
+        printf("\nselecione o primeiro Indice: ");
+        scanf("%i", &vetor1);
+        printf("\nselecione o segundo Indice: ");
+        scanf("%i", &vetor2);
+        printf("\nselecione o terceiro Indice: ");
+        scanf("%i", &vetor3);
 
         resultado1 = vetor1[vetor] * vetor2[vetor] * vetor3[vetor];
         printf("\nCalculando.....");
@@ -64,5 +64,9 @@ Menu:
         printf("\ntecle qualquer coisa para ir ao menu");
         getche();
         goto Menu;
+    }
+    if (op == 2)
+    {
+        
     }
 }
