@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <time.h>
+#include <stdlib.h>
 
 // variaveis do muno
 int op;
