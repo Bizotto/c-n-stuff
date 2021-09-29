@@ -47,7 +47,7 @@ Menu:
         }
         do
         {
-            printf("\nSelecione o Numero X dentro do vetor ");
+            printf("\nSelecione o Numero X dentro do vetor: ");
             scanf("%i", &posix);
             if ((posix < 0) || (posix > 12))
             {
@@ -59,7 +59,7 @@ Menu:
 
         do
         {
-            printf("\nSelecione o Numero Y dentro do vetor ");
+            printf("\nSelecione o Numero Y dentro do vetor: ");
             scanf("%i", &posiy);
             if ((posiy < 0) || (posiy > 12))
             {
