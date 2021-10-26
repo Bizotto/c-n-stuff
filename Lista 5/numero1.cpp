@@ -98,11 +98,9 @@ menu:
             {
                 if (somaop4 != 0)
                 {
-                    
                     somaop4 = somaop4 + matriz[x][y];
                     printf("%.2f", somaop4);
                 }
-                
             }
         }
     }

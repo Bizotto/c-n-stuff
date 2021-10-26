@@ -16,24 +16,20 @@ int Posicao;
 int main(void)
 {
     system("cls");
-   
 
-   
     for (int i = 0; i < 20; i++)
     {
         printf("%i\n", Vetor[i]);
     }
     printf("\nDigite um numero: ");
     scanf("\n%i", &ValorX);
-    
+
     for (int i = 0; i < 20; i++)
     {
         if (ValorX == Vetor[i])
         {
-            printf("O Numero %i esta na posicao [%i]",ValorX, i);
-            return(0);
+            printf("O Numero %i esta na posicao [%i]", ValorX, i);
+            return (0);
         }
-        
     }
-    
 }

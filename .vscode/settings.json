@@ -45,5 +45,7 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "editor.formatOnSave": true,
+    "editor.fontSize": 16,
 }
