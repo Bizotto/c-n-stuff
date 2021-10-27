@@ -15,7 +15,6 @@ int somaxy;
 char vet[16], vetinver[16];
 int vetult;
 
-
 // Questao 3
 char pimba;
 float produto;
