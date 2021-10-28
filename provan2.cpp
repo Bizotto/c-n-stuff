@@ -3,6 +3,7 @@
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>
+using namespace std;
 
 // Variaveis do sistema total
 char op;
@@ -16,6 +17,11 @@ char menor, maior;
 
 // variaveis do exercicio 1.3
 int matrizB[3][3], opB, impares[50], impar, num;
+
+// Variaveis do exercicio 1.4
+float matrizC[4][4], menor2, maior2, multipli;
+float a = 5.0;
+int opC;
 
 int main(void)
 {
@@ -260,6 +266,45 @@ menu_principal:
         if (opB == 4)
         {
             goto menu_principal;
+        }
+    }
+
+    if (op == 'C')
+    {
+        srand((unsigned int)time(NULL));
+
+        for (int c = 0; c < 4; c++)
+        {
+            for (int l = 0; l < 4; l++)
+            {
+
+                matrizC[c][l] = ((float)rand() / (float)(RAND_MAX)) * a;
+            }
+        }
+
+    Menu4:
+        system("cls");
+        printf("=================================================================");
+        printf("\n Opcao 1 - imprimir os valores da matriz. ");
+        printf("\n Opcao 2 - procurar um caracter dentro da matriz. ");
+        printf("\n Opcao 3 - maior e menor caracter. ");
+        printf("\n Opcao 4 - voltar ao menu inicial. ");
+        printf("\n=================================================================\n");
+        scanf("%i", &opC);
+
+        if (opC == 1)
+        {
+
+            for (int c = 0; c < 4; c++)
+            {
+                for (int l = 0; l < 4; l++)
+                {
+                    printf("\n Matriz[%i][%i] = %f \n", c, l, matrizC[c][l]);
+                }
+            }
+            printf("\n Tecle para voltar ao menu 4");
+            getche();
+            goto Menu4;
         }
     }
 }
