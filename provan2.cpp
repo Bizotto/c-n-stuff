@@ -20,7 +20,7 @@ int matrizB[3][3], opB, impares[50], impar, num;
 
 // Variaveis do exercicio 1.4
 float matrizC[4][4], menor2, maior2, multipli;
-float a = 5.0;
+float a = 99.9;
 int opC;
 
 int main(void)
@@ -285,26 +285,82 @@ menu_principal:
     Menu4:
         system("cls");
         printf("=================================================================");
-        printf("\n Opcao 1 - imprimir os valores da matriz. ");
-        printf("\n Opcao 2 - procurar um caracter dentro da matriz. ");
-        printf("\n Opcao 3 - maior e menor caracter. ");
-        printf("\n Opcao 4 - voltar ao menu inicial. ");
+        printf("\n Opcao 1 - Imprimir os valores da matriz. ");
+        printf("\n Opcao 2 - Procurar o maior e o menor caracter dentro da matriz. ");
+        printf("\n Opcao 3 - Gerar uma multiplicacao entre os resultados da matriz. ");
+        printf("\n Opcao 4 - Voltar ao menu inicial. ");
         printf("\n=================================================================\n");
         scanf("%i", &opC);
+        if ((opC < 1) || (opC > 4))
+        {
+            goto Menu4;
+        }
 
         if (opC == 1)
         {
-
+            system("cls");
             for (int c = 0; c < 4; c++)
             {
                 for (int l = 0; l < 4; l++)
                 {
-                    printf("\n Matriz[%i][%i] = %f \n", c, l, matrizC[c][l]);
+                    printf("\n Matriz[%i][%i] = %.2f \n", c, l, matrizC[c][l]);
                 }
             }
             printf("\n Tecle para voltar ao menu 4");
             getche();
             goto Menu4;
+        }
+        if (opC == 2)
+        {
+            system("cls");
+            menor2 = 200;
+            maior2 = 0;
+            for (int c = 0; c < 4; c++)
+            {
+                for (int l = 0; l < 4; l++)
+                {
+                    if (matrizC[c][l] < menor2)
+                    {
+                        menor2 = matrizC[c][l];
+                    }
+                    if (matrizC[c][l] > maior2)
+                    {
+                        maior2 = matrizC[c][l];
+                    }
+                }
+            }
+            printf("\n O maior numero da matriz e %.2f.", maior2);
+            printf("\n O menor numero da matriz e %.2f.", menor2);
+
+            printf("\n Tecle para voltar ao menu 4");
+            getche();
+            goto Menu4;
+        }
+        if (opC == 3)
+        {
+            multipli = matrizC[0][0];
+            for (int c = 0; c < 4; c++)
+            {
+                for (int l = 0; l < 4; l++)
+                {
+                    multipli = multipli * matrizC[c][l];
+                }
+            }
+            printf("\n O resultado da multiplicacao da matriz foi %.2f.", multipli);
+
+            printf("\n Tecle para voltar ao menu 4");
+            getche();
+            goto Menu4;
+        }
+
+        if (opC == 4)
+        {
+            goto menu_principal;
+        }
+
+        if (op == 'S')
+        {
+            exit(0);
         }
     }
 }
