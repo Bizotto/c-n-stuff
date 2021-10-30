@@ -57,10 +57,10 @@ menu_principal:
     Menu2:
         system("cls");
         printf("=================================================================");
-        printf("\n Opcao 1 - imprimir os valores da matriz. ");
-        printf("\n Opcao 2 - procurar um caracter dentro da matriz. ");
-        printf("\n Opcao 3 - maior e menor caracter. ");
-        printf("\n Opcao 4 - voltar ao menu inicial. ");
+        printf("\n Opcao 1 - Imprimir os valores da matriz. ");
+        printf("\n Opcao 2 - Procurar um caracter dentro da matriz. ");
+        printf("\n Opcao 3 - Maior e menor caracter. ");
+        printf("\n Opcao 4 - Voltar ao menu inicial. ");
         printf("\n=================================================================\n");
         scanf("%i", &opA);
         if ((opA < 1) || (opA > 4))
