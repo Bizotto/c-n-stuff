@@ -5,7 +5,7 @@
 #include <ctype.h>
 #include <io.h>
 #include <string.h>
-#include <dos.h>
+#include <direct.h>
 
 void MenuCli();
 void menuPrincipal();
@@ -884,65 +884,6 @@ void MenuProd()
   }
 }
 // Fim produto
-#include <conio.h>
-#include <stdio.h>
-#include <iostream>
-#include <stdlib.h>
-#include <ctype.h>
-#include <io.h>
-#include <string.h>
-#include <dos.h>
-
-void MenuCli();
-void menuPrincipal();
-
-using namespace std;
-
-struct dadosCli
-{
-  char nomeCli[20];
-  char CPFC[20];
-  int idadeCli;
-  float sbaseCli;
-  float vcomprasCli;
-
-} Cliente;
-
-struct dadosForn
-{
-  char nomeForn[20];
-  char endeForn[30];
-  char emailForn[30];
-  char cnpj[20];
-} Fornecedor;
-
-struct dadosProd
-{
-  int codprod;
-  char nomeprod[30];
-  float valorUniprod;
-
-} Produto;
-
-struct dadosFunc
-{
-  char nomeFunc[20];
-  char endeFunc[30];
-  char emailFunc[30];
-  char CPFF[20];
-  float salario;
-} Funcionario;
-
-FILE *fClientes;
-FILE *fFornecedores;
-FILE *fProdutos;
-FILE *fFuncionarios;
-FILE *fAuxCli;
-FILE *fAuxForn;
-FILE *fAuxProd;
-FILE *fAuxFunc;
-int opc;
-// inicio funcionarios
 void cria_arqFunc()
 {
   if ((fFuncionarios = fopen("funcionario.dat", "a")) == NULL)
