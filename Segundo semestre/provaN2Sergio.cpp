@@ -884,7 +884,8 @@ void MenuProd()
   }
 }
 // Fim produto
-void cria_arqFunc()
+
+void criarArquivoFuncionario()
 {
   if ((fFuncionarios = fopen("funcionario.dat", "a")) == NULL)
   {
@@ -1091,7 +1092,7 @@ void excluirFuncionario()
   fclose(fAuxFunc);
   fclose(fFuncionarios);
   remove("Funcionarios.dat");
-  cria_arqFunc();
+  criarArquivoFuncionario();
   fFuncionarios = fopen("funcionarios.dat", "r+");
   fseek(fFuncionarios, sizeof(struct dadosFunc), 0);
 
@@ -1125,12 +1126,12 @@ void excluirArquivoFuncionario()
     printf("\n Arquivo nÒo foi deletado por sua opþÒo");
     getch();
   }
-  cria_arqFunc();
+  criarArquivoFuncionario();
 }
 void MenuFunc()
 {
   system("cls");
-  cria_arqFunc();
+  criarArquivoFuncionario();
   printf("Menu de opcoes");
   printf("\n");
   printf("1 - Cadastrar Funcionario\n");
@@ -1169,6 +1170,41 @@ void MenuFunc()
 // fim funcionarios
 
 // Menu principal
+void menuPrincipal()
+{
+  void MenuCli();
+  void MenuFunc();
+  void MenuForn();
+  void MenuProd();
+  system("cls");
+  printf("Menu de opcoes");
+  printf("\n");
+  printf("1 - Clientes\n");
+  printf("2 - Funcionßrios\n");
+  printf("3 - Fornecedores\n");
+  printf("4 - Produtos\n");
+  printf("5 - Sair do Sistema\n");
+  printf("Digite uma opcao \n");
+  cin >> opc;
+  switch (opc)
+  {
+  case 1:
+    MenuCli();
+    break;
+  case 2:
+    MenuFunc();
+    break;
+  case 3:
+    MenuForn();
+    break;
+  case 4:
+    MenuProd();
+    break;
+  case 5:
+    exit(0);
+    break;
+  }
+}
 main()
 {
   setlocale(LC_ALL, "portuguese");
